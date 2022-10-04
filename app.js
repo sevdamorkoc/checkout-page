@@ -20,7 +20,16 @@ const productsDiv = document.querySelector(".products")
  productsDiv.addEventListener("click", (event) =>{
    // console.log(event);
    if(event.target.className == "fa-solid fa-minus") {
-    console.log("eksi butonu çalışıyor")
+    console.log("eksi butonu çalışıyor");
+    event.target.parentElement.querySelector(".quantity").innerText--;{
+        if(event.target.parentElement.querySelector(".quantity").innerText>1){
+        event.target.parentElement.querySelector(".quantity").innerText--;
+        }else {
+            alert("artık silme");
+        }
+    }
+    
+    
 }
 else if(event.target.className == "fa-solid fa-plus") {
     console.log("artı butonu çalışıyor");
